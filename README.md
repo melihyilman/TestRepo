@@ -8,4 +8,5 @@ Product için varsayılan kategoriler eklendi 1,8 arası id ler kullanılabilir.
 ![image](https://user-images.githubusercontent.com/23338993/208239404-db501eec-4225-4d41-a7d4-777294b33e68.png)
 
 Stokta adet bazlı arama ; 
+
 ![image](https://user-images.githubusercontent.com/23338993/208239420-f3c39fa1-fa6c-4dfa-9fd1-19a0f8dc9210.png)
