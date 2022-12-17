@@ -10,6 +10,7 @@ namespace TestRepo.Repo
 {
     public class ProductsRepo : IProductsRepo
     {
+        const int minStockQuantity = 5;
         readonly List<Product> products = new List<Product>()
         {
         };
@@ -69,6 +70,15 @@ namespace TestRepo.Repo
             if (stored == null)
             {
                 throw new KeyNotFoundException($"An object of a type '{nameof(Product)}' with the key '{p.Id}' not found");
+            }
+            if (stored.Quantity > p.Quantity)
+            {
+                var currentQty = products.Sum(x => x.Quantity);
+                if(currentQty- (stored.Quantity - p.Quantity)<minStockQuantity)
+                {
+                    throw new StockQuantityIsNotEnoughException("Stock Quantities is not enough for this operation!");
+
+                }
             }
 
             products.RemoveAll(x => x.Id == stored.Id);

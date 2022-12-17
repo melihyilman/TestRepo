@@ -2,6 +2,7 @@
 
 namespace TestRepo.Exceptions
 {
+
     [Serializable]
     internal class ProductInvalidCategoryException : Exception
     {
